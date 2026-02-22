@@ -1,6 +1,9 @@
 @import "tailwindcss";
 /* Brandia — paleta Probrands */
 
+@source "../app/**/*.{ts,tsx,js,jsx}";
+@source "../components/**/*.{ts,tsx,js,jsx}";
+
 :root {
   --background: #ffffff;
   --foreground: #03283a;
