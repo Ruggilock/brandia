@@ -5,7 +5,7 @@ import Section from "./Section";
 export default function CTA() {
   return (
     <>
-      {/* CTA Section */}
+      {/* CTA Sections */}
       <Section className="bg-dark-blue text-white">
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
