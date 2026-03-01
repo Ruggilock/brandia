@@ -47,7 +47,7 @@ export default function Process() {
 
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-block border border-bright-blue/40 px-6 py-2 mb-8">
+          <div className="inline-block  px-6 py-2 mb-8">
             <span className="text-xs text-bright-blue uppercase tracking-[0.3em]">
               El proceso
             </span>
@@ -58,32 +58,21 @@ export default function Process() {
         </div>
 
         {/* Circles grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-4">
           {steps.map((step, index) => {
             const isActive = activeSteps.has(index);
             return (
-              /* Wrapper con padding para el badge */
-              <div key={index} className="relative pt-5 pl-5">
-
-                {/* Number badge — top-left overlapping */}
-                <div className="absolute top-0 left-0 z-10 w-10 h-10 rounded-full bg-bright-blue flex items-center justify-center font-bold text-dark-blue text-sm select-none">
-                  {step.number}
-                </div>
-
+              <div key={index} className="flex flex-col items-center">
                 {/* Circle */}
                 <button
                   onClick={() => toggle(index)}
-                  className={`w-full aspect-square rounded-full flex items-center justify-center text-center px-6 transition-all duration-300 cursor-pointer border-2 ${
-                    isActive
-                      ? "bg-dark-blue border-dark-blue"
-                      : "border-dark-blue/20 hover:border-bright-blue/50"
-                  }`}
-                >
-                  <p
-                    className={`text-sm md:text-base leading-relaxed transition-colors ${
-                      isActive ? "text-white/90" : "text-dark-blue/65"
+                  className={`w-full aspect-square rounded-full flex items-center justify-center text-center px-6 transition-all duration-300 cursor-pointer border-2 ${isActive
+                    ? "bg-dark-blue border-dark-blue"
+                    : "border-dark-blue/20 hover:border-bright-blue/50"
                     }`}
-                  >
+                >
+                  <p className={`text-sm md:text-base leading-relaxed transition-colors ${isActive ? "text-white/90" : "text-dark-blue/65"
+                    }`}>
                     {isActive ? step.description : step.shortTitle}
                   </p>
                 </button>
