@@ -14,7 +14,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-avenir);
   --font-display: var(--font-avenir);
-  --font-mono: var(--font-mono);
+  --font-mono: var(--font-avenir);
 
   /* Brandia colors */
   --color-dark-blue: #03283a;

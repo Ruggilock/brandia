@@ -3,17 +3,7 @@ import Section from "./Section";
 export default function Features() {
   return (
     <section id="diferenciador">
-      {/* Title on dark background for contrast */}
-      <div className="bg-dark-blue py-20 md:py-28">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
-            No es tecnología o creatividad.{" "}
-            <br className="hidden md:block" />
-            Es tecnología <span className="text-bright-blue italic">y</span>{" "}
-            creatividad.
-          </h2>
-        </div>
-      </div>
+
 
       {/* Content on light */}
       <Section className="bg-light">
@@ -59,11 +49,10 @@ export default function Features() {
               </svg>
             </div>
             <h3 className="font-display text-xl font-bold text-dark-blue mb-4">
-              Simple y Eficaz
+              Tu marca lista, sin vueltas
             </h3>
             <p className="text-dark-blue/55 leading-relaxed text-[15px]">
-              Un formulario inteligente, una ronda de naming estratégica y
-              listo. Cero burocracia, resultados desde el primer día.
+              Olvídate de la burocracia y las esperas eternas. Pasas de la idea al registro en simples pasos, ahorrando tiempo para lo que realmente importa: hacer crecer tu negocio.
             </p>
           </div>
 
@@ -84,12 +73,10 @@ export default function Features() {
               </svg>
             </div>
             <h3 className="font-display text-xl font-bold text-dark-blue mb-4">
-              Respaldo Creativo Real
+              Estrategia de agencia a tu alcance
             </h3>
             <p className="text-dark-blue/55 leading-relaxed text-[15px]">
-              Detrás de cada nombre hay una metodología de branding probada, no
-              un algoritmo suelto. Probrands lleva 15 años construyendo marcas
-              que posicionan.
+              Accede a la creatividad y los 15 años de experiencia estratégica de Probrands de forma económica, fácil y segura. Obtén un resultado profesional sin los altos costos de una agencia tradicional.
             </p>
           </div>
 
@@ -110,12 +97,10 @@ export default function Features() {
               </svg>
             </div>
             <h3 className="font-display text-xl font-bold text-dark-blue mb-4">
-              Seguridad en cada paso
+              Dueño real desde el primer día
             </h3>
             <p className="text-dark-blue/55 leading-relaxed text-[15px]">
-              Validamos la disponibilidad de registro ante Indecopi antes de que
-              te enamores del nombre. Tu inversión creativa, protegida desde el
-              inicio.
+              Protegemos tu inversión validando la disponibilidad del nombre ante Indecopi antes de que lo elijas. Asegura tu propiedad y camina tranquilo con una marca que legalmente te pertenece.
             </p>
           </div>
         </div>

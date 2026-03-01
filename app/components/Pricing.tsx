@@ -35,7 +35,6 @@ export default function Pricing() {
         {/* Blindaje */}
         <div className="bg-light border border-gray-light rounded-2xl p-8 flex flex-col h-full">
           <div className="mb-8">
-            <span className="text-4xl block mb-4">🔒</span>
             <h3 className="font-display text-2xl font-bold text-dark-blue">
               Blindaje
             </h3>
@@ -45,7 +44,7 @@ export default function Pricing() {
           <div className="mb-6">
             <div className="flex items-baseline gap-1">
               <span className="font-display text-3xl font-bold text-dark-blue">
-                PEN 199
+                PEN 990
               </span>
             </div>
             <p className="text-xs text-dark-blue/35 mt-1">+ tasa Indecopi</p>
@@ -96,7 +95,7 @@ export default function Pricing() {
           <div className="mb-8 mt-2">
             <span className="text-4xl block mb-4">✨</span>
             <h3 className="font-display text-2xl font-bold text-white">
-              Génesis
+              NUEVO NAMING:
             </h3>
             <p className="text-sm text-white/40 mt-1">De la idea al registro</p>
           </div>
@@ -104,10 +103,7 @@ export default function Pricing() {
           <div className="mb-6">
             <div className="flex items-baseline gap-3">
               <span className="font-display text-3xl font-bold text-bright-blue">
-                PEN 349
-              </span>
-              <span className="text-sm text-white/25 line-through">
-                PEN 499
+                PEN 1590
               </span>
             </div>
             <p className="text-xs text-white/30 mt-1">Todo incluido</p>
@@ -158,7 +154,6 @@ export default function Pricing() {
         {/* Cosmos */}
         <div className="bg-light border border-gray-light rounded-2xl p-8 flex flex-col h-full">
           <div className="mb-8">
-            <span className="text-4xl block mb-4">🚀</span>
             <h3 className="font-display text-2xl font-bold text-dark-blue">
               Cosmos
             </h3>
@@ -167,11 +162,9 @@ export default function Pricing() {
 
           <div className="mb-6">
             <div className="flex items-baseline gap-1">
-              <span className="font-display text-3xl font-bold text-dark-blue">
-                A medida
+              <span className="font-display text-3xl font-bold text-dark-blue">Hablemos de tu proyecto
               </span>
             </div>
-            <p className="text-xs text-dark-blue/35 mt-1">Hablemos de tu proyecto</p>
           </div>
 
           <p className="text-sm text-dark-blue/60 mb-8 leading-relaxed">

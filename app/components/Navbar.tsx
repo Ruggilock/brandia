@@ -9,68 +9,62 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="sticky top-0 z-50 flex items-center justify-between px-6 md:px-8 py-5 bg-white/90 backdrop-blur-md border-b border-gray-light/50">
-        <div className="flex items-center gap-2">
-          <Image
-            src="/logo.svg"
-            alt="Brandia logo"
-            width={90}
-            height={90}
-            priority
-          />
-        </div>
+      {/* Floating pill navbar */}
+      <div className="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 pt-5">
+        <nav className="flex items-center justify-between w-full max-w-4xl bg-dark-blue/80 backdrop-blur-md rounded-full px-4 py-2.5 border border-white/10 shadow-lg shadow-black/20">
 
-        <div className="hidden lg:flex items-center gap-8 text-sm text-dark-blue/60">
-          <a href="#diferenciador" className="hover:text-dark-blue transition-colors">
-            Diferencial
-          </a>
-          <a href="#proceso" className="hover:text-dark-blue transition-colors">
-            Proceso
-          </a>
-          <a href="#planes" className="hover:text-dark-blue transition-colors">
-            Planes
-          </a>
-          <a href="#nosotros" className="hover:text-dark-blue transition-colors">
-            Nosotros
-          </a>
-        </div>
+          {/* Logo */}
+          <div className="flex items-center pl-1">
+            <Image
+              src="/logo.svg"
+              alt="Brandia"
+              width={84}
+              height={28}
+              priority
+              className="brightness-0 invert"
+            />
+          </div>
 
-        <Link
-          href="/onboarding"
-          className="hidden lg:block bg-dark-blue text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-bright-blue hover:text-dark-blue transition-all"
-        >
-          Registrar mi marca
-        </Link>
+          {/* Nav links — desktop */}
+          <div className="hidden lg:flex items-center gap-7 text-sm text-white/60">
+            <a href="#diferenciador" className="hover:text-white transition-colors">Diferencial</a>
+            <a href="#proceso" className="hover:text-white transition-colors">Proceso</a>
+            <a href="#planes" className="hover:text-white transition-colors">Planes</a>
+            <a href="#nosotros" className="hover:text-white transition-colors">Nosotros</a>
+          </div>
 
-        <button
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="lg:hidden flex flex-col gap-1.5 w-10 h-10 items-center justify-center rounded-full bg-dark-blue transition-all"
-          aria-label="Toggle menu"
-        >
-          {isMenuOpen ? (
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#ffffff"
-              strokeWidth="2"
+          {/* CTA + mobile toggle */}
+          <div className="flex items-center gap-3">
+            <Link
+              href="/onboarding"
+              className="hidden lg:block bg-bright-blue text-dark-blue px-5 py-2 rounded-full text-sm font-bold hover:bg-cyan transition-all"
             >
-              <path d="M18 6L6 18M6 6l12 12" />
-            </svg>
-          ) : (
-            <>
-              <span className="w-4.5 h-0.5 bg-white rounded-full"></span>
-              <span className="w-4.5 h-0.5 bg-white rounded-full"></span>
-              <span className="w-4.5 h-0.5 bg-white rounded-full"></span>
-            </>
-          )}
-        </button>
-      </nav>
+              Registrar mi marca
+            </Link>
 
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="lg:hidden flex items-center justify-center w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 transition-all"
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? (
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
+                  <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
+                  <path d="M3 12h18M3 6h18M3 18h18" />
+                </svg>
+              )}
+            </button>
+          </div>
+        </nav>
+      </div>
+
+      {/* Mobile menu overlay */}
       {isMenuOpen && (
-        <div className="lg:hidden fixed inset-0 z-40 bg-white/98 backdrop-blur-md pt-24">
-          <div className="flex flex-col px-6">
+        <div className="lg:hidden fixed inset-0 z-40 bg-dark-blue/97 backdrop-blur-md pt-24">
+          <div className="flex flex-col px-8">
             {[
               { href: "#diferenciador", label: "Diferencial" },
               { href: "#proceso", label: "Proceso" },
@@ -80,7 +74,7 @@ export default function Navbar() {
               <a
                 key={item.href}
                 href={item.href}
-                className="py-5 text-2xl font-display font-bold text-dark-blue border-b border-gray-light hover:text-bright-blue transition-colors"
+                className="py-5 text-2xl font-display font-bold text-white border-b border-white/10 hover:text-bright-blue transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.label}
@@ -88,7 +82,7 @@ export default function Navbar() {
             ))}
             <Link
               href="/onboarding"
-              className="mt-8 bg-dark-blue text-white py-4 rounded-full text-center font-bold hover:bg-bright-blue hover:text-dark-blue transition-all"
+              className="mt-8 bg-bright-blue text-dark-blue py-4 rounded-full text-center font-bold hover:bg-cyan transition-all"
               onClick={() => setIsMenuOpen(false)}
             >
               Registrar mi marca

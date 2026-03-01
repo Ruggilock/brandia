@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Space_Mono } from "next/font/google";
 import "./globals.css";
 
 const avenir = localFont({
@@ -12,12 +11,6 @@ const avenir = localFont({
     { path: "./fonts/Avenir_Black.ttf", weight: "900", style: "normal" },
   ],
   variable: "--font-avenir",
-});
-
-const spaceMono = Space_Mono({
-  variable: "--font-mono",
-  subsets: ["latin"],
-  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
@@ -33,9 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body
-        className={`${avenir.variable} ${spaceMono.variable} antialiased`}
-      >
+      <body className={`${avenir.variable} antialiased`}>
         {children}
       </body>
     </html>

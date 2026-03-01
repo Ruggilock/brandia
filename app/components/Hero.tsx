@@ -69,7 +69,7 @@ export default function Hero() {
       </div>
 
       {/* Divider + rotating text + logo */}
-      <div className="border-t border-white/10 py-14 md:py-20">
+      <div className="py-14 md:py-20">
         <div className="max-w-5xl mx-auto text-center px-6">
           <div
             className="h-10 flex items-center justify-center mb-10"
