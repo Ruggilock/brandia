@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import { Playfair_Display, DM_Sans, Space_Mono } from "next/font/google";
+import localFont from "next/font/local";
+import { Space_Mono } from "next/font/google";
 import "./globals.css";
 
-const playfair = Playfair_Display({
-  variable: "--font-display",
-  subsets: ["latin"],
-  weight: ["400", "700", "900"],
-});
-
-const dmSans = DM_Sans({
-  variable: "--font-body",
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
+const avenir = localFont({
+  src: [
+    { path: "./fonts/Avenir_Light.ttf", weight: "300", style: "normal" },
+    { path: "./fonts/Avenir_Book.ttf", weight: "400", style: "normal" },
+    { path: "./fonts/Avenir_Regular.ttf", weight: "500", style: "normal" },
+    { path: "./fonts/Avenir_Heavy.ttf", weight: "700", style: "normal" },
+    { path: "./fonts/Avenir_Black.ttf", weight: "900", style: "normal" },
+  ],
+  variable: "--font-avenir",
 });
 
 const spaceMono = Space_Mono({
@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`${playfair.variable} ${dmSans.variable} ${spaceMono.variable} antialiased`}
+        className={`${avenir.variable} ${spaceMono.variable} antialiased`}
       >
         {children}
       </body>

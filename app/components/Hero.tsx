@@ -27,58 +27,49 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-dark-blue">
-      {/* Main hero area */}
-      <div className="relative bg-light">
-        {/* Subtle decorative element */}
-        <div
-          className="absolute top-0 right-0 w-1/2 h-full opacity-[0.04] pointer-events-none"
-          style={{
-            background:
-              "radial-gradient(ellipse at 70% 30%, #00BDFF 0%, transparent 70%)",
-          }}
-        />
+    <section className="relative overflow-hidden bg-[radial-gradient(ellipse_75%_90%_at_28%_-10%,#00f3ff_0%,#00bdff_18%,#024d68_46%,#03283a_68%)]">
 
-        <div className="relative max-w-5xl mx-auto text-center px-6 pt-20 pb-24 md:pt-28 md:pb-32">
-          {/* Slogan tag */}
-          <p className="font-mono text-xs text-bright-blue uppercase tracking-[0.25em] mb-8">
-            Tu marca registrada en simples pasos
-          </p>
+      {/* Main hero content */}
+      <div className="relative max-w-5xl mx-auto text-center px-6 pt-24 pb-20 md:pt-32 md:pb-28">
 
-          <h1 className="font-display text-4xl md:text-6xl lg:text-[5.5rem] font-bold text-dark-blue leading-[1.1] max-w-5xl mx-auto mb-4">
-            Tu marca nace aquí.
-          </h1>
-          <p className="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-bright-blue leading-[1.1] max-w-4xl mx-auto mb-10">
-            Inteligente, única y registrada.
-          </p>
+        {/* Slogan tag */}
+        <p className="font-mono text-xs text-cyan uppercase tracking-[0.25em] mb-8">
+          Tu marca registrada en simples pasos
+        </p>
 
-          <p className="text-base md:text-lg text-dark-blue/60 max-w-2xl mx-auto mb-12 leading-relaxed">
-            Deja de postergar lo más importante: que tu marca sea tuya de verdad.
-            Con Brandia creamos nombres estratégicos y gestionamos el registro
-            ante Indecopi en simples pasos, con el respaldo creativo de Probrands
-            y la precisión de la IA.
-          </p>
+        <h1 className="font-display text-4xl md:text-6xl lg:text-[5.5rem] font-black text-white leading-[1.1] max-w-5xl mx-auto mb-4">
+          Tu marca nace aquí.
+        </h1>
+        <p className="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-bright-blue leading-[1.1] max-w-4xl mx-auto mb-10">
+          Inteligente, única y registrada.
+        </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/onboarding"
-              className="bg-dark-blue text-white px-8 py-4 rounded-full font-bold text-base hover:bg-bright-blue hover:text-dark-blue transition-all shadow-lg"
-            >
-              Quiero registrar mi marca ahora
-            </Link>
+        <p className="text-base md:text-lg text-white/60 max-w-2xl mx-auto mb-12 leading-relaxed font-[400]">
+          Deja de postergar lo más importante: que tu marca sea tuya de verdad.
+          Con Brandia creamos nombres estratégicos y gestionamos el registro
+          ante Indecopi en simples pasos, con el respaldo creativo de Probrands
+          y la precisión de la IA.
+        </p>
 
-            <a
-              href="#proceso"
-              className="text-dark-blue px-8 py-4 rounded-full font-medium text-base border border-dark-blue/20 hover:border-dark-blue transition-all"
-            >
-              Ver cómo funciona
-            </a>
-          </div>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <Link
+            href="/onboarding"
+            className="bg-bright-blue text-dark-blue px-8 py-4 rounded-full font-bold text-base hover:bg-cyan hover:text-dark-blue transition-all shadow-lg shadow-bright-blue/20"
+          >
+            Quiero registrar mi marca ahora
+          </Link>
+
+          <a
+            href="#proceso"
+            className="text-white px-8 py-4 rounded-full font-[500] text-base border border-white/20 hover:border-white/50 transition-all"
+          >
+            Ver cómo funciona
+          </a>
         </div>
       </div>
 
-      {/* Dark strip - animated rotating text */}
-      <div className="bg-dark-blue py-14 md:py-20">
+      {/* Divider + rotating text + logo */}
+      <div className="border-t border-white/10 py-14 md:py-20">
         <div className="max-w-5xl mx-auto text-center px-6">
           <div
             className="h-10 flex items-center justify-center mb-10"
@@ -95,7 +86,6 @@ export default function Hero() {
             </span>
           </div>
 
-          {/* Cierre visual: logotipo + sello Probrands */}
           <div className="flex flex-col items-center gap-3">
             <Image
               src="/logo.svg"
