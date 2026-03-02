@@ -27,7 +27,21 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-[radial-gradient(ellipse_75%_90%_at_28%_-10%,#00f3ff_0%,#00bdff_18%,#024d68_46%,#03283a_68%)]">
+    <section className="relative overflow-hidden bg-dark-blue">
+
+      {/* Video background */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover opacity-60 pointer-events-none"
+      >
+        <source src="/hero-video.mp4" type="video/mp4" />
+      </video>
+
+      {/* Gradient overlay sobre el video */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_75%_90%_at_28%_-10%,#00f3ff_0%,#00bdff_18%,#024d68_46%,#03283a_68%)] opacity-70 pointer-events-none" />
 
       {/* Main hero content */}
       <div className="relative max-w-5xl mx-auto text-center px-6 pt-24 pb-20 md:pt-32 md:pb-28">
